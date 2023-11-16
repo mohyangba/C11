@@ -10,12 +10,23 @@ void swap (int *x, int *y) {
      
 int main(int argc, char *argv[])
 {
-  int a = 3;
-  int b = 5;
+  int i;
+  int grade[5];
+  int average=0;
   
-  swap(&a, &b); // 포인터를 받는 형태니까 변수의 주솟값을 입력 
+  for (i=0;i<5;i++) 
+  {
+      printf("grade[%i] = ", i);
+      scanf("%d", &grade[i]);
+  }
   
-  printf("a: %i, b: %i \n", a, b);
+  //반복문 및 포인터 문법으로 grade 배열값 출력  
+  for (i=0;i<5;i++) 
+  {
+      printf("grade[%i] = %i\n", *(grade+i));
+      // 평균 값 계산  
+      average = average + *(grade+i);
+  }
   
   system("PAUSE");	
   return 0;
