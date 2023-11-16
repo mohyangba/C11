@@ -3,27 +3,21 @@
 
 int main(int argc, char *argv[])
 {
-  int i;
-  int grade[5];
-  int sum=0; // 합
+  char *pc;
+  int *pi;
+  double *pd;
   
-  //grade에 입력 
-  for (i=0;i<5;i++) 
-  {
-      printf("Entergrade[%i] = \n", i);
-      scanf("%d", &grade[i]);
-  }
+  pc = (char *)10000;
+  pi = (int*)10000;
+  pd = (double*)10000;
   
-  //반복문 및 포인터 문법으로 grade 배열값 출력  
-  for (i=0;i<5;i++) 
-  {
-      printf("grade[%i] = %i\n", i, grade[i]);
-     sum += *(grade+i);
-  }
-   // 평균 값 계산  
-  float average = (float) sum/5;
-  printf("average = %.2f\n", average);
-   
+  printf("증가 전 : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+  
+  pc++;
+  pi++;
+  pd++;
+  
+  printf("증가 후: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
   system("PAUSE");	
   return 0;
 }
