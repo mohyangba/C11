@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void setPointer (char **q)
+{
+      *q = "proverb ver2";
+}
 int main(int argc, char *argv[]) {
-    int i = 4;
-
-    int *pi = &i;
-    char *pc = (char *)&i; // Cast the pointer to char
-
-    printf("%i, %i, %i\n", i, *pi, *pc); // Corrected pointer dereference
-
+    
+    char *p = "zzz";
+    setPointer(&p);
+    printf("%s\n", p);
+    
     system("PAUSE");
     return 0;
 }
